@@ -5,7 +5,6 @@
 <p align="center" style="color:#ff6f00; font-family: 'Courier New', monospace;">
 Cyberpunk Neon Fighter Jet Shooter
 </p>
----
 
 <p align="center">
 <img src="https://img.shields.io/badge/Unity-2025-orange?style=for-the-badge&logo=unity&logoColor=white"/>
