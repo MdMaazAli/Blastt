@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class CollisionHandler : MonoBehaviour
         else{
             Instantiate(killParticlesPlayer,transform.position,Quaternion.identity);
             Destroy(gameObject);
+            SceneManager.LoadScene("MainMenu");
         }
     }
 
