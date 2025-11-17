@@ -5,12 +5,18 @@ public class CollisionHandler : MonoBehaviour
 {
 
     [SerializeField] GameObject killParticlesPlayer;
+    [SerializeField] GameObject tryAgainWindow;
     // void OnCollisionEnter(Collision other)
     // {
     //     if(other.gameObject.tag=="Respawn"){
     //         Debug.Log("crashed!!");
     //     }
     // }
+
+    void Start()
+    {
+        tryAgainWindow.SetActive(false);
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -20,7 +26,8 @@ public class CollisionHandler : MonoBehaviour
         else{
             Instantiate(killParticlesPlayer,transform.position,Quaternion.identity);
             Destroy(gameObject);
-            SceneManager.LoadScene("MainMenu");
+            tryAgainWindow.SetActive(true);
+            // SceneManager.LoadScene("MainMenu");
         }
     }
 
